@@ -3,9 +3,15 @@ public class BudgetCategory {
     private double limit;
     private double spent;
     
-    public String getName() {
-        return name;
+    public BudgetCategory (String name, double limit, double spent) {
+        this.name = name;
+        this.limit = limit;
+        this.spent = spent;
     }
+
+    public String getName() {
+            return name;
+        }
     public void setName(String name) {
         this.name = name;
     }
@@ -23,6 +29,6 @@ public class BudgetCategory {
     }
     @Override
     public String toString() {
-        return "The budget limit for " + name + " was: " + limit + " but the actual spent amount was " + spent;
+        return name + ", " + limit + ", " + spent;
     }
 }
