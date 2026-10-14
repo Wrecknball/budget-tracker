@@ -29,6 +29,6 @@ public class BudgetCategory {
     }
     @Override
     public String toString() {
-        return name + ", " + limit + ", " + spent;
+        return name + " -- Budget limit: " + limit + "; Amount spent: " + spent + "; ";
     }
 }
