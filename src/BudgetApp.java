@@ -25,10 +25,15 @@ public class BudgetApp {
             BudgetCategory budget = new BudgetCategory(category, limit, spent);
             budgetList.add(budget);
         }
-        System.out.println(budgetList);
+        System.out.println("No sorting: " + budgetList);
         Collections.sort(budgetList);
         System.out.println("");
-        System.out.println(budgetList);
+        System.out.println("Sorted from least overspent to most: " + budgetList);
+        Collections.sort(budgetList, Comparator.reverseOrder());
+        System.out.println("");
+        System.out.println("Sorted from most overspent to least: " + budgetList);
+        System.out.println("");
+        System.out.println("The total above/below budget you are is: $" + budgetDifference(budgetList));
     }
 
     /**
@@ -43,10 +48,14 @@ public class BudgetApp {
      * @param categories the budget categories with the spend
      * @return the total amount over/under budget
      */
-    public static int budgetDifference(List<BudgetCategory> categories) {
+    public static double budgetDifference(List<BudgetCategory> categories) {
         // TODO: You will implement this method in Wave 4
         // Note that this method SHOULD NOT have a print statement.
         // It should instead return the value.
-        return -1;
+        double total = 0;
+        for (BudgetCategory budget : categories) {
+            total += budget.getSpent() - budget.getLimit();
+        }
+        return total;
     }
 }
