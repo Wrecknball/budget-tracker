@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BudgetApp {
     public static void main(String[] args) {
-        // Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         // BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
         // System.out.println(groceries.toString());
         List<BudgetCategory> budgetList = new ArrayList<>();
@@ -20,8 +20,10 @@ public class BudgetApp {
 
             String limitString = String.format("$%.2f", limit);
             String spentString = String.format("$%.2f", spent);
+            BudgetCategory budget = new BudgetCategory(category, limit, spent);
+            budgetList.add(budget);
         }
-        
+        System.out.println(budgetList);
     }
 
     /**

@@ -1,19 +1,19 @@
-public class BudgetCategory {
-    private String name;
+public class BudgetCategory implements Comparable<BudgetCategory>{
+    private String category;
     private double limit;
     private double spent;
     
-    public BudgetCategory (String name, double limit, double spent) {
-        this.name = name;
+    public BudgetCategory (String category, double limit, double spent) {
+        this.category = category;
         this.limit = limit;
         this.spent = spent;
     }
 
-    public String getName() {
-            return name;
+    public String getCategory() {
+            return category;
         }
-    public void setName(String name) {
-        this.name = name;
+    public void setCategory(String category) {
+        this.category = category;
     }
     public double getLimit() {
         return limit;
@@ -29,6 +29,6 @@ public class BudgetCategory {
     }
     @Override
     public String toString() {
-        return name + " -- Budget limit: " + limit + "; Amount spent: " + spent + "; ";
+        return category + " -- Budget limit: " + limit + "; Amount spent: " + spent + "; ";
     }
 }
