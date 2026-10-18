@@ -1,0 +1,17 @@
+No sorting: [Rent -- Budget limit: 1350.0; Amount spent: 1350.0; , Groceries -- Budget limit: 400.0; Amount spent: 375.0; , Dining Out -- Budget limit: 120.0; Amount spent: 185.0; , Transportation -- Budget limit: 200.0; Amount spent: 190.0; , Entertainment -- Budget limit: 80.0; Amount spent: 115.0; , Utilities -- Budget limit: 150.0; Amount spent: 165.0; ]
+
+Sorted from least overspent to most: [Groceries -- Budget limit: 400.0; Amount spent: 375.0; , Transportation -- Budget limit: 200.0; Amount spent: 190.0; , Rent -- Budget limit: 1350.0; Amount spent: 1350.0; , Utilities -- Budget limit: 150.0; Amount spent: 165.0; , Entertainment -- Budget limit: 80.0; Amount spent: 115.0; , Dining Out -- Budget limit: 120.0; Amount spent: 185.0; ]
+
+Sorted from most overspent to least: [Dining Out -- Budget limit: 120.0; Amount spent: 185.0; , Entertainment -- Budget limit: 80.0; Amount spent: 115.0; , Utilities -- Budget limit: 150.0; Amount spent: 165.0; , Rent -- Budget limit: 1350.0; Amount spent: 1350.0; , Transportation -- Budget limit: 200.0; Amount spent: 190.0; , Groceries -- Budget limit: 400.0; Amount spent: 375.0; ]
+
+The total above/below budget you are is: $80.0
+
+-----Budget-----
+Each * = $100, | = budget limit
+
+Dining Out: ************|******
+Entertainment: ********|***
+Utilities : ***************|*
+Rent      : ***************************************************************************************************************************************|
+Transportation: ******************* |
+Groceries : *************************************   |
