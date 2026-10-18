@@ -34,6 +34,8 @@ public class BudgetApp {
         System.out.println("Sorted from most overspent to least: " + budgetList);
         System.out.println("");
         System.out.println("The total above/below budget you are is: $" + budgetDifference(budgetList));
+        System.out.println("");
+        budgetChart(budgetList);
     }
 
     /**
@@ -57,5 +59,37 @@ public class BudgetApp {
             total += budget.getSpent() - budget.getLimit();
         }
         return total;
+    }
+
+    public static void budgetChart(List<BudgetCategory> categories) {
+        System.out.println("-----Budget-----");
+        System.out.println("Each * = $100, | = budget limit");
+        System.out.println("");
+
+        for (BudgetCategory category : categories) {
+            System.out.printf("%-10s: ", category.getCategory());
+
+            double limit = category.getLimit();
+            double spent = category.getSpent();
+
+            int limitStars = (int) (limit / 10);
+            int spentStars = (int) (spent / 10);
+
+            for (int i = 0; i < Math.min(spentStars, limitStars); i++) {
+                System.out.print("*");
+            }
+
+            for (int i = spentStars; i < limitStars; i++) {
+                System.out.print(" ");
+            }
+
+            System.out.print("|");
+
+            for (int i = limitStars; i < spentStars; i++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
     }
 }
